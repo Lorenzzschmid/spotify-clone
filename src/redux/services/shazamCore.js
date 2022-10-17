@@ -1,3 +1,5 @@
+//Our logic for the Api-fetching
+
 import { createApi, fetchBaseQuery } from "@reduxjs/toolkit/query/react";
 
 export const shazamCoreApi = createApi({
@@ -14,7 +16,7 @@ export const shazamCoreApi = createApi({
     },
   }),
   endpoints: (builder) => ({
-    getTopCharts: builder.query({ query: "/charts/world" }),
+    getTopCharts: builder.query({ query: () => "/charts/world" }),
   }),
 });
 
